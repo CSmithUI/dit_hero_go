@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import './App.css';
-import { TestCall } from '../wailsjs/go/main/Entry';
+import { GetDirEntries } from '../wailsjs/go/browser/Browser';
 
 function App() {
   function trigger() {
-    TestCall('Tested!');
+    GetDirEntries('/Users/nullst8/Downloads');
   }
   return (
     <div className='bg-heroBlack-800 w-screen h-screen text-textNormal text-xs'>

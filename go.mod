@@ -4,10 +4,7 @@ go 1.21
 
 toolchain go1.22.0
 
-require (
-	github.com/karrick/godirwalk v1.17.0
-	github.com/wailsapp/wails/v2 v2.8.0
-)
+require github.com/wailsapp/wails/v2 v2.8.0
 
 require (
 	github.com/bep/debounce v1.2.1 // indirect

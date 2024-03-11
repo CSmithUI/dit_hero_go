@@ -3,6 +3,8 @@ package main
 import (
 	"embed"
 
+	"github.com/CSmithUI/dit_hero_go/browser"
+
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
@@ -19,6 +21,7 @@ func main() {
 
 	entry := NewEntry()
 
+	browser := browser.NewBrowser("source")
 
 
 	// Create application with options
@@ -34,6 +37,7 @@ func main() {
 		Bind: []interface{}{
 			app,
 			entry,
+			browser,
 		},
 		Mac: &mac.Options{
 			About: &mac.AboutInfo{
