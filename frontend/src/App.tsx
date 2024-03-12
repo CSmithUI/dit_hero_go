@@ -1,11 +1,8 @@
-import { useState } from 'react';
+import Browser from './browser/Browser';
+
 import './App.css';
-import { GetDirEntries } from '../wailsjs/go/browser/Browser';
 
 function App() {
-  function trigger() {
-    GetDirEntries('/Users/nullst8/Downloads');
-  }
   return (
     <div className='bg-heroBlack-800 w-screen h-screen text-textNormal text-xs'>
       <div className='flex w-screen h-screen'>
@@ -14,11 +11,13 @@ function App() {
           <div className='flex-row bg-heroBlack-800 w-4/12 p-3'>
             <div className='h-1/2'>
               <h1>SOURCE</h1>
-              <div></div>
+              <div>
+                <Browser />
+              </div>
             </div>
             <div className='h-1/2'>
               <h1>PRESETS</h1>
-              <button onClick={trigger}>Test</button>
+              <Browser />
             </div>
           </div>
 

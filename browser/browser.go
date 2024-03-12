@@ -34,7 +34,7 @@ func NewDirEntryJs(name string, isDir bool) *DirEntryJs {
 
 
 // load directory contents
-func (b *Browser) GetDirEntries (dir string)  {
+func (b *Browser) GetDirEntries (dir string) string {
 
     // Open the directory.
     outputDirRead, _ := os.Open(dir)
@@ -79,8 +79,11 @@ func (b *Browser) GetDirEntries (dir string)  {
 		// j, _ := json.Marshal(dirEntriesJs)
 		// log.Println(string(j))
 	
-		j, _ := json.MarshalIndent(dirEntriesJs, "", "  ")
-		log.Println(string(j))
+		contentsJson, _ := json.Marshal(dirEntriesJs)
+
+
+		//return the json to the front end
+		return string(contentsJson)
 }
 
 
