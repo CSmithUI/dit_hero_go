@@ -6,10 +6,12 @@ export default {
     extend: {
       colors: {
         accent: '#ffdd00',
+        accentDark: '#948000',
         textNormal: '#eaeef1',
         heroBlack: {
-          100: '#',
-          200: '#d0d0f6',
+          50: '#f2f2f8',
+          100: '#d9d9f0',
+          200: '#cdcdee',
           300: '#aaaacd',
           400: '#8888a3',
           500: '#6f6f84',
@@ -21,5 +23,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 };
