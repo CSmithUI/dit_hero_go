@@ -31,7 +31,7 @@ export default function Browser() {
     return <p>No Data</p>;
   } else {
     return (
-      <div className='w-14 h-14'>
+      <div className=''>
         <div className='p-3 bg-heroBlack-800 border border-accentDark overflow-y-scroll h-full max-h-screen overflow-x-hidden scrollbar scrollbar-track-heroBlack-700 scrollbar-thumb-accent scrollbar-corner-heroBlack-700'>
           {dirEntries?.map((dirEntry: DirEntry, index: number) => (
             <DirEntryLine
