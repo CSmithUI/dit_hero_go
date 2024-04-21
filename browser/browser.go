@@ -87,6 +87,8 @@ func (b *Browser) GetDirEntries (dir string) string {
 }
 
 
+
+
 // recursively walk a directory tree
 func (b *Browser) WalkBrowser(browserName string, dirPath string) {
 	err := filepath.WalkDir(dirPath, func(path string, d fs.DirEntry, err error) error {
