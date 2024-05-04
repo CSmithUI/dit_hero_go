@@ -1,4 +1,6 @@
-export default function Browser() {
+import Browser from '.././browser/Browser';
+
+export default function QuadLayout() {
   return (
     <div className='flex w-screen h-screen'>
       <div className='bg-heroBlack-700 w-20 min-w-20 p-3'>OFFLOAD</div>
